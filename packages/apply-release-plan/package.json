@@ -1,6 +1,6 @@
 {
   "name": "@fond-of/changesets-apply-release-plan",
-  "version": "7.0.4",
+  "version": "7.0.5",
   "description": "Takes a release plan and applies it to packages",
   "main": "dist/fond-of-changesets-apply-release-plan.cjs.js",
   "module": "dist/fond-of-changesets-apply-release-plan.esm.js",
