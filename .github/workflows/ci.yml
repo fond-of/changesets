@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
 
+env:
+  NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   test:
     name: Test
