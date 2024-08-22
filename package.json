@@ -18,10 +18,6 @@
     "version-packages": "yarn changeset version && yarn prettier",
     "release": "yarn build && yarn changeset publish"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/changesets/changesets.git"
-  },
   "workspaces": [
     "packages/*",
     "scripts/*"
