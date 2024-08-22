@@ -24,7 +24,7 @@ export default async function status(
     since?: string;
     verbose?: boolean;
     output?: string;
-    configPath?: string
+    configPath?: string;
   },
   config: Config
 ) {
@@ -36,7 +36,12 @@ export default async function status(
   }
   const sinceBranch =
     since === undefined ? (sinceMaster ? "master" : undefined) : since;
-  const releasePlan = await getReleasePlan(cwd, sinceBranch, config, configPath);
+  const releasePlan = await getReleasePlan(
+    cwd,
+    sinceBranch,
+    config,
+    configPath
+  );
   const { changesets, releases } = releasePlan;
   const changedPackages = await getVersionableChangedPackages(config, {
     cwd,

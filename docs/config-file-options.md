@@ -151,7 +151,10 @@ You would specify our github changelog generator with:
 
 ```json
 {
-  "changelog": ["@fond-of/changesets-changelog-github", { "repo": "<org>/<repo>" }]
+  "changelog": [
+    "@fond-of/changesets-changelog-github",
+    { "repo": "<org>/<repo>" }
+  ]
 }
 ```
 

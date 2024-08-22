@@ -41,7 +41,7 @@ export function getChangelogEntry(changelog: string, version: string) {
 
   let highestLevel: number = BumpLevels.dep;
 
-  let nodes = ast.children as Array<any>;
+  let nodes = (ast as unknown as { children: Array<any> }).children;
   let headingStartInfo:
     | {
         index: number;
@@ -77,10 +77,9 @@ export function getChangelogEntry(changelog: string, version: string) {
     }
   }
   if (headingStartInfo) {
-    ast.children = (ast.children as any).slice(
-      headingStartInfo.index + 1,
-      endIndex
-    );
+    (ast as unknown as { children: Array<any> }).children = (
+      ast as unknown as { children: Array<any> }
+    ).children.slice(headingStartInfo.index + 1, endIndex);
   }
   return {
     content: unified().use(remarkStringify).stringify(ast),

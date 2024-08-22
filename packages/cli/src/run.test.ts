@@ -22,7 +22,7 @@ describe("cli", () => {
       });
 
       await run(["version"], { config: "/path/custom-config.json" }, cwd);
-    })
+    });
 
     it("should validate package name passed in from --ignore flag", async () => {
       const cwd = await testdir({

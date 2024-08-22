@@ -196,7 +196,11 @@ export async function run(
         return;
       }
       case "status": {
-        await status(cwd, { sinceMaster, since, verbose, output, configPath }, config);
+        await status(
+          cwd,
+          { sinceMaster, since, verbose, output, configPath },
+          config
+        );
         return;
       }
       case "tag": {

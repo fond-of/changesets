@@ -1,7 +1,10 @@
 import { ChangelogFunctions } from "@fond-of/changesets-types";
 // @ts-ignore
 import { config } from "dotenv";
-import { getInfo, getInfoFromPullRequest } from "@fond-of/changesets-get-github-info";
+import {
+  getInfo,
+  getInfoFromPullRequest,
+} from "@fond-of/changesets-get-github-info";
 
 config();
 

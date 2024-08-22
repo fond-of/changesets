@@ -228,7 +228,10 @@ describe("Add command", () => {
       { empty: false },
       {
         ...defaultConfig,
-        commit: [path.resolve(__dirname, "..", "..", "..", "commit", "index.ts"), null],
+        commit: [
+          path.resolve(__dirname, "..", "..", "..", "commit", "index.ts"),
+          null,
+        ],
       }
     );
     expect(git.add).toHaveBeenCalledTimes(1);

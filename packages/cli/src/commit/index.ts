@@ -1,4 +1,8 @@
-import { Changeset, CommitFunctions, ReleasePlan } from "@fond-of/changesets-types";
+import {
+  Changeset,
+  CommitFunctions,
+  ReleasePlan,
+} from "@fond-of/changesets-types";
 import outdent from "outdent";
 
 type SkipCI = boolean | "add" | "version";

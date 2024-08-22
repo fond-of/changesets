@@ -1,4 +1,7 @@
-import { ChangelogFunctions, NewChangesetWithCommit } from "@fond-of/changesets-types";
+import {
+  ChangelogFunctions,
+  NewChangesetWithCommit,
+} from "@fond-of/changesets-types";
 
 import { ModCompWithPackage } from "@fond-of/changesets-types";
 import startCase from "lodash.startcase";
