@@ -1,5 +1,5 @@
 {
-  "name": "@changesets/repository",
+  "name": "@fond-of/changesets-repository",
   "version": "1.0.0",
   "private": true,
   "description": "A tool to help manage the versioning and changelogs for open source packages",
@@ -77,5 +77,6 @@
       "importsConditions": true
     }
   },
-  "prettier": {}
+  "prettier": {},
+  "packageManager": "yarn@4.4.0"
 }

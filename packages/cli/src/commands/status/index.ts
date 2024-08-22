@@ -1,14 +1,14 @@
 import chalk from "chalk";
 import fs from "fs-extra";
 import path from "path";
-import getReleasePlan from "@changesets/get-release-plan";
-import { error, info, log, warn } from "@changesets/logger";
+import getReleasePlan from "@fond-of/changesets-get-release-plan";
+import { error, info, log, warn } from "@fond-of/changesets-logger";
 import {
   ComprehensiveRelease,
   Config,
   Release,
   VersionType,
-} from "@changesets/types";
+} from "@fond-of/changesets-types";
 import { getVersionableChangedPackages } from "../../utils/versionablePackages";
 
 export default async function status(
@@ -18,11 +18,13 @@ export default async function status(
     since,
     verbose,
     output,
+    configPath,
   }: {
     sinceMaster?: boolean;
     since?: string;
     verbose?: boolean;
     output?: string;
+    configPath?: string;
   },
   config: Config
 ) {
@@ -34,7 +36,12 @@ export default async function status(
   }
   const sinceBranch =
     since === undefined ? (sinceMaster ? "master" : undefined) : since;
-  const releasePlan = await getReleasePlan(cwd, sinceBranch, config);
+  const releasePlan = await getReleasePlan(
+    cwd,
+    sinceBranch,
+    config,
+    configPath
+  );
   const { changesets, releases } = releasePlan;
   const changedPackages = await getVersionableChangedPackages(config, {
     cwd,

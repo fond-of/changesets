@@ -1,8 +1,8 @@
 // This function takes in changesets and returns one release per
 // package listed in the changesets
 
-import { shouldSkipPackage } from "@changesets/should-skip-package";
-import { Config, NewChangeset } from "@changesets/types";
+import { shouldSkipPackage } from "@fond-of/changesets-should-skip-package";
+import { Config, NewChangeset } from "@fond-of/changesets-types";
 import { Package } from "@manypkg/get-packages";
 import { InternalRelease } from "./types";
 

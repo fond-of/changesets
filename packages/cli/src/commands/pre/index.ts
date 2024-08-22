@@ -1,11 +1,11 @@
-import * as logger from "@changesets/logger";
+import * as logger from "@fond-of/changesets-logger";
 import chalk from "chalk";
-import { exitPre, enterPre } from "@changesets/pre";
+import { exitPre, enterPre } from "@fond-of/changesets-pre";
 import {
   PreExitButNotInPreModeError,
   PreEnterButInPreModeError,
   ExitError,
-} from "@changesets/errors";
+} from "@fond-of/changesets-errors";
 
 export default async function pre(
   cwd: string,

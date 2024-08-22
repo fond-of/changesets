@@ -1,6 +1,6 @@
 import mri from "mri";
-import { ExitError, InternalError } from "@changesets/errors";
-import { error } from "@changesets/logger";
+import { ExitError, InternalError } from "@fond-of/changesets-errors";
+import { error } from "@fond-of/changesets-logger";
 import { format } from "util";
 import { run } from "./run";
 
@@ -67,7 +67,7 @@ if (parsed.help && args.length === 1) {
 // Version should only be shown if it's the only argument passed
 if (parsed.version && args.length === 1) {
   // eslint-disable-next-line import/no-extraneous-dependencies
-  console.log(require("@changesets/cli/package.json").version);
+  console.log(require("@fond-of/changesets-cli/package.json").version);
   process.exit(0);
 }
 
@@ -90,9 +90,9 @@ ${format("", err).replace(process.cwd(), "<cwd>")}
 
 ## Versions
 
-- @changesets/cli@${
+- @fond-of/changesets-cli@${
         // eslint-disable-next-line import/no-extraneous-dependencies
-        require("@changesets/cli/package.json").version
+        require("@fond-of/changesets-cli/package.json").version
       }
 - node@${process.version}
 

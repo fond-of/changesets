@@ -1,18 +1,18 @@
 {
-  "name": "@changesets/errors",
+  "name": "@fond-of/changesets-errors",
   "version": "0.2.0",
   "description": "Error classes for @changesets",
-  "main": "dist/changesets-errors.cjs.js",
-  "module": "dist/changesets-errors.esm.js",
+  "main": "dist/fond-of-changesets-errors.cjs.js",
+  "module": "dist/fond-of-changesets-errors.esm.js",
   "exports": {
     ".": {
       "types": {
-        "import": "./dist/changesets-errors.cjs.mjs",
-        "default": "./dist/changesets-errors.cjs.js"
+        "import": "./dist/fond-of-changesets-errors.cjs.mjs",
+        "default": "./dist/fond-of-changesets-errors.cjs.js"
       },
-      "module": "./dist/changesets-errors.esm.js",
-      "import": "./dist/changesets-errors.cjs.mjs",
-      "default": "./dist/changesets-errors.cjs.js"
+      "module": "./dist/fond-of-changesets-errors.esm.js",
+      "import": "./dist/fond-of-changesets-errors.cjs.mjs",
+      "default": "./dist/fond-of-changesets-errors.cjs.js"
     },
     "./package.json": "./package.json"
   },

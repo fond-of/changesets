@@ -2,11 +2,11 @@ import chalk from "chalk";
 import { spawn } from "child_process";
 import path from "path";
 
-import * as git from "@changesets/git";
-import { info, log, warn } from "@changesets/logger";
-import { shouldSkipPackage } from "@changesets/should-skip-package";
-import { Config } from "@changesets/types";
-import writeChangeset from "@changesets/write";
+import * as git from "@fond-of/changesets-git";
+import { info, log, warn } from "@fond-of/changesets-logger";
+import { shouldSkipPackage } from "@fond-of/changesets-should-skip-package";
+import { Config } from "@fond-of/changesets-types";
+import writeChangeset from "@fond-of/changesets-write";
 import { getPackages } from "@manypkg/get-packages";
 import { ExternalEditor } from "external-editor";
 import { getCommitFunctions } from "../../commit/getCommitFunctions";

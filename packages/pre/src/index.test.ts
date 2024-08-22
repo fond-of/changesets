@@ -4,8 +4,8 @@ import path from "path";
 import {
   PreEnterButInPreModeError,
   PreExitButNotInPreModeError,
-} from "@changesets/errors";
-import { testdir } from "@changesets/test-utils";
+} from "@fond-of/changesets-errors";
+import { testdir } from "@fond-of/changesets-test-utils";
 
 describe("enterPre", () => {
   it("should enter", async () => {

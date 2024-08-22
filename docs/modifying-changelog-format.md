@@ -6,16 +6,16 @@ Changesets comes with a default format for the changelogs for packages which is 
 
 To change how the changelog is generated, you use the `changelog` setting in the `./changeset/config.json`. This setting accepts a string, which points to a module. You can reference an npm package that you have installed, or a local file where you have written your own functions.
 
-For example, `changesets` has a package, `@changesets/changelog-git`. To use it, you would first need to install the package.
+For example, `changesets` has a package, `@fond-of/changesets-changelog-git`. To use it, you would first need to install the package.
 
 ```
-yarn add @changesets/changelog-git
+yarn add @fond-of/changesets-changelog-git
 ```
 
 Next, change your `.changeset/config.json` to point to the new package:
 
 ```
-"changelog": "@changesets/changelog-git"
+"changelog": "@fond-of/changesets-changelog-git"
 ```
 
 If you want to write your own, you can reference a file path. For example, you can create a new file `.changeset/my-changelog-config.js`, then you can reference it in the `.changeset/config.json` file as:
@@ -41,10 +41,10 @@ module.exports = {
 
 These functions are run during the `changeset version` and are expected to return a string (or a promise with a string).
 
-If you are using typescript to write your changelog functions, you can use the type. First install `@changesets/types`, and then:
+If you are using typescript to write your changelog functions, you can use the type. First install `@fond-of/changesets-types`, and then:
 
 ```ts
-import { ChangelogFunctions } from "@changesets/types";
+import { ChangelogFunctions } from "@fond-of/changesets-types";
 
 async function getReleaseLine() {}
 
@@ -70,7 +70,7 @@ type getReleaseLine(
     },
     // the type of the change this changeset refers to, as "major", "minor", or "patch"
     type
-    // This needs to be explained - see @changesets/changelog-github's code for how this works
+    // This needs to be explained - see @fond-of/changesets-changelog-github's code for how this works
     changelogOpts
 ) => string
 ```

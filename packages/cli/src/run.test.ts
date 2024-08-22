@@ -1,13 +1,29 @@
-import { error } from "@changesets/logger";
-import { testdir } from "@changesets/test-utils";
+import { error } from "@fond-of/changesets-logger";
+import { testdir } from "@fond-of/changesets-test-utils";
 
 import { run } from "./run";
 
-jest.mock("@changesets/logger");
+jest.mock("@fond-of/changesets-logger");
 jest.mock("./commands/version");
 
 describe("cli", () => {
   describe("version", () => {
+    it("should read the config file from flag", async () => {
+      const cwd = await testdir({
+        "package.json": JSON.stringify({
+          private: true,
+          workspaces: ["packages/*"],
+        }),
+        "packages/pkg-a/package.json": JSON.stringify({
+          name: "pkg-a",
+          version: "1.0.0",
+        }),
+        ".changeset/path/custom-config.json": JSON.stringify({}),
+      });
+
+      await run(["version"], { config: "/path/custom-config.json" }, cwd);
+    });
+
     it("should validate package name passed in from --ignore flag", async () => {
       const cwd = await testdir({
         "package.json": JSON.stringify({

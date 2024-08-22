@@ -1,11 +1,11 @@
 import * as fs from "fs-extra";
 import path from "path";
-import { PreState } from "@changesets/types";
+import { PreState } from "@fond-of/changesets-types";
 import { getPackages } from "@manypkg/get-packages";
 import {
   PreExitButNotInPreModeError,
   PreEnterButInPreModeError,
-} from "@changesets/errors";
+} from "@fond-of/changesets-errors";
 
 export async function readPreState(cwd: string): Promise<PreState | undefined> {
   let preStatePath = path.resolve(cwd, ".changeset", "pre.json");

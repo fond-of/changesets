@@ -1,4 +1,4 @@
-# @changesets/errors
+# @fond-of/changesets-errors
 
 ## 0.2.0
 

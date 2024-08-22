@@ -1,13 +1,13 @@
 import path from "path";
 import chalk from "chalk";
 import * as fs from "fs-extra";
-import * as logger from "@changesets/logger";
-import { ExitError } from "@changesets/errors";
-import { testdir } from "@changesets/test-utils";
+import * as logger from "@fond-of/changesets-logger";
+import { ExitError } from "@fond-of/changesets-errors";
+import { testdir } from "@fond-of/changesets-test-utils";
 
 import pre from "./index";
 
-jest.mock("@changesets/logger");
+jest.mock("@fond-of/changesets-logger");
 
 let mockedLogger = logger as jest.Mocked<typeof logger>;
 

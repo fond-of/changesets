@@ -1,13 +1,13 @@
-import { InternalError } from "@changesets/errors";
-import { getDependentsGraph } from "@changesets/get-dependents-graph";
-import { shouldSkipPackage } from "@changesets/should-skip-package";
+import { InternalError } from "@fond-of/changesets-errors";
+import { getDependentsGraph } from "@fond-of/changesets-get-dependents-graph";
+import { shouldSkipPackage } from "@fond-of/changesets-should-skip-package";
 import {
   Config,
   NewChangeset,
   PackageGroup,
   PreState,
   ReleasePlan,
-} from "@changesets/types";
+} from "@fond-of/changesets-types";
 import { Package, Packages } from "@manypkg/get-packages";
 import semverParse from "semver/functions/parse";
 import applyLinks from "./apply-links";

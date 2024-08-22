@@ -1,9 +1,9 @@
-import { read } from "@changesets/config";
-import { ExitError } from "@changesets/errors";
-import { getDependentsGraph } from "@changesets/get-dependents-graph";
-import { error } from "@changesets/logger";
-import { shouldSkipPackage } from "@changesets/should-skip-package";
-import { Config } from "@changesets/types";
+import { read } from "@fond-of/changesets-config";
+import { ExitError } from "@fond-of/changesets-errors";
+import { getDependentsGraph } from "@fond-of/changesets-get-dependents-graph";
+import { error } from "@fond-of/changesets-logger";
+import { shouldSkipPackage } from "@fond-of/changesets-should-skip-package";
+import { Config } from "@fond-of/changesets-types";
 import { getPackages } from "@manypkg/get-packages";
 import fs from "fs-extra";
 import path from "path";
@@ -41,7 +41,7 @@ export async function run(
 
   let config: Config;
   try {
-    config = await read(cwd, packages);
+    config = await read(cwd, packages, flags.config);
   } catch (e) {
     let oldConfigExists = await fs.pathExists(
       path.resolve(cwd, ".changeset/config.js")
@@ -85,6 +85,7 @@ export async function run(
       tag,
       open,
       gitTag,
+      config: configPath,
     }: CliOptions = flags;
     const deadFlags = ["updateChangelog", "isPublic", "skipCI", "commit"];
 
@@ -195,7 +196,11 @@ export async function run(
         return;
       }
       case "status": {
-        await status(cwd, { sinceMaster, since, verbose, output }, config);
+        await status(
+          cwd,
+          { sinceMaster, since, verbose, output, configPath },
+          config
+        );
         return;
       }
       case "tag": {

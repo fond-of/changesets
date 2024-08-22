@@ -3,10 +3,10 @@ import chalk from "chalk";
 import semverLt from "semver/functions/lt";
 
 import * as cli from "../../utils/cli-utilities";
-import { error, log } from "@changesets/logger";
-import { Release, PackageJSON } from "@changesets/types";
+import { error, log } from "@fond-of/changesets-logger";
+import { Release, PackageJSON } from "@fond-of/changesets-types";
 import { Package } from "@manypkg/get-packages";
-import { ExitError } from "@changesets/errors";
+import { ExitError } from "@fond-of/changesets-errors";
 
 const { green, yellow, red, bold, blue, cyan } = chalk;
 

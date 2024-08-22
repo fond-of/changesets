@@ -11,7 +11,7 @@ import fs from "fs-extra";
  * making this a require should be fine.
  */
 // eslint-disable-next-line import/no-commonjs
-const logger = require("@changesets/logger");
+const logger = require("@fond-of/changesets-logger");
 
 const createLogSilencer = () => {
   const originalLoggerError = logger.error;

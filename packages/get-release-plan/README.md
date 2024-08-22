@@ -1,11 +1,11 @@
-# @changesets/get-release-plan
+# @fond-of/changesets-get-release-plan
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@changesets/get-release-plan)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@fond-of/changesets-get-release-plan)
 
 A function that reads information about the current repository
 
 ```js
-import getReleasePlan from "@changesets/get-release-plan";
+import getReleasePlan from "@fond-of/changesets-get-release-plan";
 
 const releasePlan = await getReleasePlan(cwd, since, passedConfig);
 ```
@@ -21,4 +21,4 @@ diverged from another one.
 
 ## passedConfig?: Config
 
-The changeset config options as defined in `@changesets/types`. This is optional, and can be used to overwrite any written config options.
+The changeset config options as defined in `@fond-of/changesets-types`. This is optional, and can be used to overwrite any written config options.

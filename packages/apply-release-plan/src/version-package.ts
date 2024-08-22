@@ -2,8 +2,8 @@ import {
   ComprehensiveRelease,
   PackageJSON,
   VersionType,
-} from "@changesets/types";
-import getVersionRangeType from "@changesets/get-version-range-type";
+} from "@fond-of/changesets-types";
+import getVersionRangeType from "@fond-of/changesets-get-version-range-type";
 import Range from "semver/classes/range";
 import semverPrerelease from "semver/functions/prerelease";
 import validRange from "semver/ranges/valid";

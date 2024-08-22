@@ -1,18 +1,18 @@
 {
-  "name": "@changesets/types",
+  "name": "@fond-of/changesets-types",
   "version": "6.0.0",
   "description": "Common types shared between changeset packages",
-  "main": "dist/changesets-types.cjs.js",
-  "module": "dist/changesets-types.esm.js",
+  "main": "dist/fond-of-changesets-types.cjs.js",
+  "module": "dist/fond-of-changesets-types.esm.js",
   "exports": {
     ".": {
       "types": {
-        "import": "./dist/changesets-types.cjs.mjs",
-        "default": "./dist/changesets-types.cjs.js"
+        "import": "./dist/fond-of-changesets-types.cjs.mjs",
+        "default": "./dist/fond-of-changesets-types.cjs.js"
       },
-      "module": "./dist/changesets-types.esm.js",
-      "import": "./dist/changesets-types.cjs.mjs",
-      "default": "./dist/changesets-types.cjs.js"
+      "module": "./dist/fond-of-changesets-types.esm.js",
+      "import": "./dist/fond-of-changesets-types.cjs.mjs",
+      "default": "./dist/fond-of-changesets-types.cjs.js"
     },
     "./package.json": "./package.json"
   },

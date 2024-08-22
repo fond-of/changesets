@@ -1,18 +1,18 @@
-## @changesets/test-utils
+## @fond-of/changesets-test-utils
 
-> Utilities for testing @changesets/\* packages
+> Utilities for testing @fond-of/changesets-\* packages
 
 ### Utilities
 
 #### temporarilySilenceLogs
 
-Silence the logs created but the `@changesets/logger` packages.
+Silence the logs created but the `@fond-of/changesets-logger` packages.
 
 **Usage**
 
 ```
 // index.test.ts
-import { temporarilySilenceLogs } from "@changesets/test-utils";
+import { temporarilySilenceLogs } from "@fond-of/changesets-test-utils";
 
 temporarilySilenceLogs();
 ```

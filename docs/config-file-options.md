@@ -10,7 +10,7 @@ Changesets has a minimal amount of configuration options. Mostly these are for w
   "access": "restricted",
   "baseBranch": "master",
   "ignore": [],
-  "changelog": "@changesets/cli/changelog"
+  "changelog": "@fond-of/changesets-cli/changelog"
 }
 ```
 
@@ -20,7 +20,7 @@ Changesets has a minimal amount of configuration options. Mostly these are for w
 
 This option is for setting if the `changeset add` command and the `changeset version` commands will also add and commit the changed files using git, and how the commit messages should be generated for them.
 
-By default, we do not commit the files, and leave it to the user to commit the files. If it is `true`, we use the default commit message generator (`["@changesets/cli/commit", { "skipCI": "version" }]`). Setting it to a string and options tuple specifies a path from where we will load the commit message generation functions. It expects to be a file that exports one or both of the following:
+By default, we do not commit the files, and leave it to the user to commit the files. If it is `true`, we use the default commit message generator (`["@fond-of/changesets-cli/commit", { "skipCI": "version" }]`). Setting it to a string and options tuple specifies a path from where we will load the commit message generation functions. It expects to be a file that exports one or both of the following:
 
 ```
 {
@@ -74,11 +74,11 @@ These restrictions exist to ensure your repository or published code do not end 
 
 ## `fixed` (array of arrays of package names)
 
-This option can be used to declare that packages should be version-bumped and published together. As an example, if you have a `@changesets/button` component and a `@changesets/theme` component and you want to make sure that when one gets bumped to `1.1.0`, the other is also bumped to `1.1.0` regardless if it has any change or not. To achieve this you would have the config:
+This option can be used to declare that packages should be version-bumped and published together. As an example, if you have a `@fond-of/changesets-button` component and a `@fond-of/changesets-theme` component and you want to make sure that when one gets bumped to `1.1.0`, the other is also bumped to `1.1.0` regardless if it has any change or not. To achieve this you would have the config:
 
 ```json
 {
-  "fixed": [["@changesets/button", "@changesets/theme"]]
+  "fixed": [["@fond-of/changesets-button", "@fond-of/changesets-theme"]]
 }
 ```
 
@@ -86,11 +86,11 @@ If you want to use this option, you should read the documentation on [fixed pack
 
 ## `linked` (array of arrays of package names)
 
-This option can be used to declare that packages should 'share' a version, instead of being versioned completely independently. As an example, if you have a `@changesets/button` component and a `@changesets/theme` component and you want to make sure that when one gets bumped to `2.0.0`, the other is also bumped to `2.0.0`. To achieve this you would have the config:
+This option can be used to declare that packages should 'share' a version, instead of being versioned completely independently. As an example, if you have a `@fond-of/changesets-button` component and a `@fond-of/changesets-theme` component and you want to make sure that when one gets bumped to `2.0.0`, the other is also bumped to `2.0.0`. To achieve this you would have the config:
 
 ```json
 {
-  "linked": [["@changesets/button", "@changesets/theme"]]
+  "linked": [["@fond-of/changesets-button", "@fond-of/changesets-theme"]]
 }
 ```
 
@@ -145,13 +145,16 @@ This option is for setting how the changelog for packages should be generated. I
 }
 ```
 
-As well as the default one, you can use `@changesets/changelog-git`, which adds links to commits into changelogs, or `@changesets/changelog-github`, which requires github authentication, and includes a thankyou message to the person who added the changeset as well as a link to the relevant PR.
+As well as the default one, you can use `@fond-of/changesets-changelog-git`, which adds links to commits into changelogs, or `@fond-of/changesets-changelog-github`, which requires github authentication, and includes a thankyou message to the person who added the changeset as well as a link to the relevant PR.
 
 You would specify our github changelog generator with:
 
 ```json
 {
-  "changelog": ["@changesets/changelog-github", { "repo": "<org>/<repo>" }]
+  "changelog": [
+    "@fond-of/changesets-changelog-github",
+    { "repo": "<org>/<repo>" }
+  ]
 }
 ```
 

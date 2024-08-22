@@ -1,13 +1,13 @@
-import { defaultConfig } from "@changesets/config";
-import * as git from "@changesets/git";
-import { shouldSkipPackage } from "@changesets/should-skip-package";
+import { defaultConfig } from "@fond-of/changesets-config";
+import * as git from "@fond-of/changesets-git";
+import { shouldSkipPackage } from "@fond-of/changesets-should-skip-package";
 import {
   ChangelogFunctions,
   Config,
   ModCompWithPackage,
   NewChangeset,
   ReleasePlan,
-} from "@changesets/types";
+} from "@fond-of/changesets-types";
 import { Packages } from "@manypkg/get-packages";
 import detectIndent from "detect-indent";
 import fs from "fs-extra";

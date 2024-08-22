@@ -1,15 +1,15 @@
-# @changesets/write
+# @fond-of/changesets-write
 
 Writes a changeset to a file.
 
 ```js
-import write from "@changesets/write";
+import write from "@fond-of/changesets-write";
 
 const changeset = {
   summary: "A description of a minor change",
   releases: [
-    { name: "@changesets/something", type: "minor" },
-    { name: "@changesets/something-else", type: "patch" },
+    { name: "@fond-of/changesets-something", type: "minor" },
+    { name: "@fond-of/changesets-something-else", type: "patch" },
   ],
 };
 
@@ -23,8 +23,8 @@ For example, it can convert:
 {
   "summary": "A description of a minor change",
   "releases": [
-    { "name": "@changesets/something", "type": "minor" },
-    { "name": "@changesets/something-else", "type": "patch" }
+    { "name": "@fond-of/changesets-something", "type": "minor" },
+    { "name": "@fond-of/changesets-something-else", "type": "patch" }
   ]
 }
 ```
@@ -33,8 +33,8 @@ to
 
 ```markdown
 ---
-"@changesets/something": minor
-"@changesets/something-else": patch
+"@fond-of/changesets-something": minor
+"@fond-of/changesets-something-else": patch
 ---
 
 A description of a minor change

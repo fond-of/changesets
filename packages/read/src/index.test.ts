@@ -3,7 +3,7 @@ import path from "path";
 import outdent from "outdent";
 
 import read from "./";
-import { silenceLogsInBlock, testdir } from "@changesets/test-utils";
+import { silenceLogsInBlock, testdir } from "@fond-of/changesets-test-utils";
 
 silenceLogsInBlock();
 

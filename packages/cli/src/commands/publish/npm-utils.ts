@@ -1,6 +1,6 @@
-import { ExitError } from "@changesets/errors";
-import { error, info, warn } from "@changesets/logger";
-import { AccessType, PackageJSON } from "@changesets/types";
+import { ExitError } from "@fond-of/changesets-errors";
+import { error, info, warn } from "@fond-of/changesets-logger";
+import { AccessType, PackageJSON } from "@fond-of/changesets-types";
 import pLimit from "p-limit";
 import preferredPM from "preferred-pm";
 import chalk from "chalk";
