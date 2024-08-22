@@ -1,5 +1,20 @@
 # @fond-of/changesets-cli
 
+## 2.28.0
+
+### Minor Changes
+
+- [`134fdb1`](https://github.com/changesets/changesets/commit/134fdb1c8406560b7356b47183eaf66a3030b1dc) Thanks [@SpiderDan98](https://github.com/SpiderDan98)! - feat add config path option
+
+### Patch Changes
+
+- [#1419](https://github.com/changesets/changesets/pull/1419) [`4efc038`](https://github.com/changesets/changesets/commit/4efc0382fcf7ef0ebd0d8e0515b655b6870728f1) Thanks [@bluwy](https://github.com/bluwy)! - Fix logging `--version` flag
+
+- Updated dependencies [[`134fdb1`](https://github.com/changesets/changesets/commit/134fdb1c8406560b7356b47183eaf66a3030b1dc)]:
+  - @fond-of/changesets-get-release-plan@4.1.0
+  - @fond-of/changesets-config@3.1.0
+  - @fond-of/changesets-apply-release-plan@7.0.5
+
 ## 2.27.7
 
 ### Patch Changes

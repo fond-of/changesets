@@ -1,5 +1,16 @@
 # @fond-of/changesets-get-release-plan
 
+## 4.1.0
+
+### Minor Changes
+
+- [`134fdb1`](https://github.com/changesets/changesets/commit/134fdb1c8406560b7356b47183eaf66a3030b1dc) Thanks [@SpiderDan98](https://github.com/SpiderDan98)! - feat add config path option
+
+### Patch Changes
+
+- Updated dependencies [[`134fdb1`](https://github.com/changesets/changesets/commit/134fdb1c8406560b7356b47183eaf66a3030b1dc)]:
+  - @fond-of/changesets-config@3.1.0
+
 ## 4.0.3
 
 ### Patch Changes

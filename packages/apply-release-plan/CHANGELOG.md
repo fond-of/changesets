@@ -1,5 +1,12 @@
 # @fond-of/changesets-apply-release-plan
 
+## 7.0.5
+
+### Patch Changes
+
+- Updated dependencies [[`134fdb1`](https://github.com/changesets/changesets/commit/134fdb1c8406560b7356b47183eaf66a3030b1dc)]:
+  - @fond-of/changesets-config@3.1.0
+
 ## 7.0.4
 
 ### Patch Changes
