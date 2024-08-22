@@ -1,9 +1,9 @@
-import { error } from "@changesets/logger";
-import { testdir } from "@changesets/test-utils";
+import { error } from "@fond-of/changesets-logger";
+import { testdir } from "@fond-of/changesets-test-utils";
 
 import { run } from "./run";
 
-jest.mock("@changesets/logger");
+jest.mock("@fond-of/changesets-logger");
 jest.mock("./commands/version");
 
 describe("cli", () => {

@@ -1,7 +1,7 @@
-import { ChangelogFunctions } from "@changesets/types";
+import { ChangelogFunctions } from "@fond-of/changesets-types";
 // @ts-ignore
 import { config } from "dotenv";
-import { getInfo, getInfoFromPullRequest } from "@changesets/get-github-info";
+import { getInfo, getInfoFromPullRequest } from "@fond-of/changesets-get-github-info";
 
 config();
 
@@ -13,7 +13,7 @@ const changelogFunctions: ChangelogFunctions = {
   ) => {
     if (!options.repo) {
       throw new Error(
-        'Please provide a repo to this changelog generator like this:\n"changelog": ["@changesets/changelog-github", { "repo": "org/repo" }]'
+        'Please provide a repo to this changelog generator like this:\n"changelog": ["@fond-of/changesets-changelog-github", { "repo": "org/repo" }]'
       );
     }
     if (dependenciesUpdated.length === 0) return "";
@@ -43,7 +43,7 @@ const changelogFunctions: ChangelogFunctions = {
   getReleaseLine: async (changeset, type, options) => {
     if (!options || !options.repo) {
       throw new Error(
-        'Please provide a repo to this changelog generator like this:\n"changelog": ["@changesets/changelog-github", { "repo": "org/repo" }]'
+        'Please provide a repo to this changelog generator like this:\n"changelog": ["@fond-of/changesets-changelog-github", { "repo": "org/repo" }]'
       );
     }
 

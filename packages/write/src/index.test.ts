@@ -1,10 +1,10 @@
 import fs from "fs-extra";
 import path from "path";
-import parse from "@changesets/parse";
+import parse from "@fond-of/changesets-parse";
 import writeChangeset from "./";
 
 import humanId from "human-id";
-import { testdir } from "@changesets/test-utils";
+import { testdir } from "@fond-of/changesets-test-utils";
 
 jest.mock("human-id");
 

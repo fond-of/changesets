@@ -1,8 +1,8 @@
 import fs from "fs-extra";
 import path from "path";
-import parse from "@changesets/parse";
-import { NewChangeset } from "@changesets/types";
-import * as git from "@changesets/git";
+import parse from "@fond-of/changesets-parse";
+import { NewChangeset } from "@fond-of/changesets-types";
+import * as git from "@fond-of/changesets-git";
 import getOldChangesetsAndWarn from "./legacy";
 
 async function filterChangesetsSinceRef(

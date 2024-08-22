@@ -1,10 +1,10 @@
-import { read } from "@changesets/config";
-import * as git from "@changesets/git";
-import { silenceLogsInBlock, testdir } from "@changesets/test-utils";
+import { read } from "@fond-of/changesets-config";
+import * as git from "@fond-of/changesets-git";
+import { silenceLogsInBlock, testdir } from "@fond-of/changesets-test-utils";
 import { getPackages } from "@manypkg/get-packages";
 import tag from "../index";
 
-jest.mock("@changesets/git");
+jest.mock("@fond-of/changesets-git");
 
 async function readConfig(cwd: string) {
   return read(cwd, await getPackages(cwd));

@@ -1,6 +1,6 @@
-# @changesets/types
+# @fond-of/changesets-types
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@changesets/types)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@fond-of/changesets-types)
 
 A package of types for use in changesets, or projects wishing to extend them.
 

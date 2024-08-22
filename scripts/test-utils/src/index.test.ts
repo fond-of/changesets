@@ -1,4 +1,4 @@
-import { log } from "@changesets/logger";
+import { log } from "@fond-of/changesets-logger";
 import { silenceLogsInBlock } from "./";
 
 describe("temporarilySilenceLogs", () => {

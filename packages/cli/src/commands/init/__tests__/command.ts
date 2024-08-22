@@ -1,7 +1,7 @@
 import fs from "fs-extra";
 import path from "path";
-import { defaultWrittenConfig } from "@changesets/config";
-import { silenceLogsInBlock, testdir } from "@changesets/test-utils";
+import { defaultWrittenConfig } from "@fond-of/changesets-config";
+import { silenceLogsInBlock, testdir } from "@fond-of/changesets-test-utils";
 
 import initializeCommand from "..";
 

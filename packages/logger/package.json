@@ -1,18 +1,18 @@
 {
-  "name": "@fond-of/changeset-logger",
+  "name": "@fond-of/changesets-logger",
   "version": "0.1.0",
   "description": "Console log alias",
-  "main": "dist/changesets-logger.cjs.js",
-  "module": "dist/changesets-logger.esm.js",
+  "main": "dist/fond-of-changesets-logger.cjs.js",
+  "module": "dist/fond-of-changesets-logger.esm.js",
   "exports": {
     ".": {
       "types": {
-        "import": "./dist/changesets-logger.cjs.mjs",
-        "default": "./dist/changesets-logger.cjs.js"
+        "import": "./dist/fond-of-changesets-logger.cjs.mjs",
+        "default": "./dist/fond-of-changesets-logger.cjs.js"
       },
-      "module": "./dist/changesets-logger.esm.js",
-      "import": "./dist/changesets-logger.cjs.mjs",
-      "default": "./dist/changesets-logger.cjs.js"
+      "module": "./dist/fond-of-changesets-logger.esm.js",
+      "import": "./dist/fond-of-changesets-logger.cjs.mjs",
+      "default": "./dist/fond-of-changesets-logger.cjs.js"
     },
     "./package.json": "./package.json"
   },

@@ -1,11 +1,11 @@
-## @changesets/logger
+## @fond-of/changesets-logger
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@changesets/logger)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@fond-of/changesets-logger)
 
 ### Usage
 
 ```js
-import { error } from '@changesets/logger";
+import { error } from '@fond-of/changesets-logger";
 
 error('message part 1', 'message part 2');
 ```
@@ -24,13 +24,13 @@ error('message part 1', 'message part 2');
 
 ### Silencing Messages In Tests
 
-Use the `@changesets/test-utils` package to silence the logs in test cases.
+Use the `@fond-of/changesets-test-utils` package to silence the logs in test cases.
 
 For example:
 
 ```js
-import { temporarilySilenceLogs } from "@changesets/test-utils";
-import { log } from "@changesets/logger";
+import { temporarilySilenceLogs } from "@fond-of/changesets-test-utils";
+import { log } from "@fond-of/changesets-logger";
 
 temporarilySilenceLogs();
 

@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import startCase from "lodash.startcase";
-import { getCommitsThatAddFiles } from "@changesets/git";
-import { ComprehensiveRelease, NewChangeset } from "@changesets/types";
+import { getCommitsThatAddFiles } from "@fond-of/changesets-git";
+import { ComprehensiveRelease, NewChangeset } from "@fond-of/changesets-types";
 
 import { RelevantChangesets } from "../types";
 

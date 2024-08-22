@@ -1,4 +1,4 @@
-# @changesets/types
+# @fond-of/changesets-types
 
 ## 6.0.0
 

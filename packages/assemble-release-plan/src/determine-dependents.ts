@@ -1,10 +1,10 @@
-import { shouldSkipPackage } from "@changesets/should-skip-package";
+import { shouldSkipPackage } from "@fond-of/changesets-should-skip-package";
 import {
   Config,
   DependencyType,
   PackageJSON,
   VersionType,
-} from "@changesets/types";
+} from "@fond-of/changesets-types";
 import { Package } from "@manypkg/get-packages";
 import semverSatisfies from "semver/functions/satisfies";
 import { incrementVersion } from "./increment";

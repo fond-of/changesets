@@ -1,11 +1,11 @@
 import publishPackages from "../publishPackages";
-import * as git from "@changesets/git";
-import { defaultConfig } from "@changesets/config";
-import { silenceLogsInBlock, testdir } from "@changesets/test-utils";
+import * as git from "@fond-of/changesets-git";
+import { defaultConfig } from "@fond-of/changesets-config";
+import { silenceLogsInBlock, testdir } from "@fond-of/changesets-test-utils";
 import runRelease from "..";
 
 jest.mock("../../../utils/cli-utilities");
-jest.mock("@changesets/git");
+jest.mock("@fond-of/changesets-git");
 jest.mock("../publishPackages");
 
 // @ts-ignore

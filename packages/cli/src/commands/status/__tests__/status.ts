@@ -1,8 +1,8 @@
-import { read } from "@changesets/config";
-import * as git from "@changesets/git";
-import { gitdir, silenceLogsInBlock } from "@changesets/test-utils";
-import { ReleasePlan } from "@changesets/types";
-import writeChangeset from "@changesets/write";
+import { read } from "@fond-of/changesets-config";
+import * as git from "@fond-of/changesets-git";
+import { gitdir, silenceLogsInBlock } from "@fond-of/changesets-test-utils";
+import { ReleasePlan } from "@fond-of/changesets-types";
+import writeChangeset from "@fond-of/changesets-write";
 import { getPackages } from "@manypkg/get-packages";
 import fs from "fs-extra";
 import path from "path";

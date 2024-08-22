@@ -1,8 +1,8 @@
 import * as fs from "fs-extra";
 import path from "path";
 import micromatch from "micromatch";
-import { ValidationError } from "@changesets/errors";
-import { warn } from "@changesets/logger";
+import { ValidationError } from "@fond-of/changesets-errors";
+import { warn } from "@fond-of/changesets-logger";
 import { Packages } from "@manypkg/get-packages";
 import {
   Config,
@@ -10,13 +10,13 @@ import {
   Fixed,
   Linked,
   PackageGroup,
-} from "@changesets/types";
+} from "@fond-of/changesets-types";
 import packageJson from "../package.json";
-import { getDependentsGraph } from "@changesets/get-dependents-graph";
+import { getDependentsGraph } from "@fond-of/changesets-get-dependents-graph";
 
 export let defaultWrittenConfig = {
-  $schema: `https://unpkg.com/@changesets/config@${packageJson.version}/schema.json`,
-  changelog: "@changesets/cli/changelog",
+  $schema: `https://unpkg.com/@fond-of/changesets-config@${packageJson.version}/schema.json`,
+  changelog: "@fond-of/changesets-cli/changelog",
   commit: false,
   fixed: [] as Fixed,
   linked: [] as Linked,
@@ -49,7 +49,7 @@ function getNormalizedCommitOption(
     return false;
   }
   if (thing === true) {
-    return ["@changesets/cli/commit", { skipCI: "version" }];
+    return ["@fond-of/changesets-cli/commit", { skipCI: "version" }];
   }
   if (typeof thing === "string") {
     return [thing, null];
@@ -117,7 +117,7 @@ export let parse = (json: WrittenConfig, packages: Packages): Config => {
         json.changelog,
         null,
         2
-      )} when the only valid values are undefined, false, a module path(e.g. "@changesets/cli/changelog" or "./some-module") or a tuple with a module path and config for the changelog generator(e.g. ["@changesets/cli/changelog", { someOption: true }])`
+      )} when the only valid values are undefined, false, a module path(e.g. "@fond-of/changesets-cli/changelog" or "./some-module") or a tuple with a module path and config for the changelog generator(e.g. ["@fond-of/changesets-cli/changelog", { someOption: true }])`
     );
   }
 
@@ -157,7 +157,7 @@ export let parse = (json: WrittenConfig, packages: Packages): Config => {
         json.commit,
         null,
         2
-      )} when the only valid values are undefined or a boolean or a module path (e.g. "@changesets/cli/commit" or "./some-module") or a tuple with a module path and config for the commit message generator (e.g. ["@changesets/cli/commit", { "skipCI": "version" }])`
+      )} when the only valid values are undefined or a boolean or a module path (e.g. "@fond-of/changesets-cli/commit" or "./some-module") or a tuple with a module path and config for the commit message generator (e.g. ["@fond-of/changesets-cli/commit", { "skipCI": "version" }])`
     );
   }
   if (json.baseBranch !== undefined && typeof json.baseBranch !== "string") {

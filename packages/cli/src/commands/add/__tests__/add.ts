@@ -1,9 +1,9 @@
 import path from "path";
 import stripAnsi from "strip-ansi";
-import * as git from "@changesets/git";
-import { defaultConfig } from "@changesets/config";
-import { silenceLogsInBlock, testdir } from "@changesets/test-utils";
-import writeChangeset from "@changesets/write";
+import * as git from "@fond-of/changesets-git";
+import { defaultConfig } from "@fond-of/changesets-config";
+import { silenceLogsInBlock, testdir } from "@fond-of/changesets-test-utils";
+import writeChangeset from "@fond-of/changesets-write";
 
 import {
   askCheckboxPlus,
@@ -15,8 +15,8 @@ import {
 import addChangeset from "..";
 
 jest.mock("../../../utils/cli-utilities");
-jest.mock("@changesets/git");
-jest.mock("@changesets/write");
+jest.mock("@fond-of/changesets-git");
+jest.mock("@fond-of/changesets-write");
 // @ts-ignore
 writeChangeset.mockImplementation(() => Promise.resolve("abcdefg"));
 // @ts-ignore
@@ -228,7 +228,7 @@ describe("Add command", () => {
       { empty: false },
       {
         ...defaultConfig,
-        commit: [path.resolve(__dirname, "..", "..", "..", "commit"), null],
+        commit: [path.resolve(__dirname, "..", "..", "..", "commit", "index.ts"), null],
       }
     );
     expect(git.add).toHaveBeenCalledTimes(1);

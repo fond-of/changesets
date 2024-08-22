@@ -1,14 +1,14 @@
 import chalk from "chalk";
 import fs from "fs-extra";
 import path from "path";
-import getReleasePlan from "@changesets/get-release-plan";
-import { error, info, log, warn } from "@changesets/logger";
+import getReleasePlan from "@fond-of/changesets-get-release-plan";
+import { error, info, log, warn } from "@fond-of/changesets-logger";
 import {
   ComprehensiveRelease,
   Config,
   Release,
   VersionType,
-} from "@changesets/types";
+} from "@fond-of/changesets-types";
 import { getVersionableChangedPackages } from "../../utils/versionablePackages";
 
 export default async function status(

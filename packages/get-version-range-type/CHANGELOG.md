@@ -1,4 +1,4 @@
-# @changesets/get-version-range-type
+# @fond-of/changesets-get-version-range-type
 
 ## 0.4.0
 

@@ -1,11 +1,11 @@
 import fs from "fs-extra";
 import path from "path";
-import * as git from "@changesets/git";
-import { warn } from "@changesets/logger";
-import { silenceLogsInBlock, testdir } from "@changesets/test-utils";
-import writeChangeset from "@changesets/write";
-import { Config, Changeset } from "@changesets/types";
-import { defaultConfig } from "@changesets/config";
+import * as git from "@fond-of/changesets-git";
+import { warn } from "@fond-of/changesets-logger";
+import { silenceLogsInBlock, testdir } from "@fond-of/changesets-test-utils";
+import writeChangeset from "@fond-of/changesets-write";
+import { Config, Changeset } from "@fond-of/changesets-types";
+import { defaultConfig } from "@fond-of/changesets-config";
 import { getPackages } from "@manypkg/get-packages";
 import pre from "../pre";
 import version from "./index";
@@ -42,8 +42,8 @@ function mockGlobalDate<
   };
 }
 
-let changelogPath = path.resolve(__dirname, "../../changelog");
-let commitPath = path.resolve(__dirname, "../../commit");
+let changelogPath = path.resolve(__dirname, "../../changelog.ts");
+let commitPath = path.resolve(__dirname, "../../commit/index.ts");
 let modifiedDefaultConfig: Config = {
   ...defaultConfig,
   changelog: [changelogPath, null],
@@ -58,9 +58,9 @@ let defaultOptions = {
 const consoleError = console.error;
 
 jest.mock("../../utils/cli-utilities");
-jest.mock("@changesets/git");
+jest.mock("@fond-of/changesets-git");
 jest.mock("human-id");
-jest.mock("@changesets/logger");
+jest.mock("@fond-of/changesets-logger");
 
 // @ts-ignore
 git.add.mockImplementation(() => Promise.resolve(true));

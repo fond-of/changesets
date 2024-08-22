@@ -1,9 +1,9 @@
-import assembleReleasePlan from "@changesets/assemble-release-plan";
-import readChangesets from "@changesets/read";
-import { read } from "@changesets/config";
-import { Config, ReleasePlan } from "@changesets/types";
+import assembleReleasePlan from "@fond-of/changesets-assemble-release-plan";
+import readChangesets from "@fond-of/changesets-read";
+import { read } from "@fond-of/changesets-config";
+import { Config, ReleasePlan } from "@fond-of/changesets-types";
 import { getPackages } from "@manypkg/get-packages";
-import { readPreState } from "@changesets/pre";
+import { readPreState } from "@fond-of/changesets-pre";
 
 export default async function getReleasePlan(
   cwd: string,

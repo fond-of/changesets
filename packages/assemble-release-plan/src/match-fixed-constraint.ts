@@ -1,5 +1,5 @@
-import { shouldSkipPackage } from "@changesets/should-skip-package";
-import { Config } from "@changesets/types";
+import { shouldSkipPackage } from "@fond-of/changesets-should-skip-package";
+import { Config } from "@fond-of/changesets-types";
 import { Package } from "@manypkg/get-packages";
 import { InternalRelease } from "./types";
 import { getCurrentHighestVersion, getHighestReleaseType } from "./utils";

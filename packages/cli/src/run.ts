@@ -1,9 +1,9 @@
-import { read } from "@changesets/config";
-import { ExitError } from "@changesets/errors";
-import { getDependentsGraph } from "@changesets/get-dependents-graph";
-import { error } from "@changesets/logger";
-import { shouldSkipPackage } from "@changesets/should-skip-package";
-import { Config } from "@changesets/types";
+import { read } from "@fond-of/changesets-config";
+import { ExitError } from "@fond-of/changesets-errors";
+import { getDependentsGraph } from "@fond-of/changesets-get-dependents-graph";
+import { error } from "@fond-of/changesets-logger";
+import { shouldSkipPackage } from "@fond-of/changesets-should-skip-package";
+import { Config } from "@fond-of/changesets-types";
 import { getPackages } from "@manypkg/get-packages";
 import fs from "fs-extra";
 import path from "path";

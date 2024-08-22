@@ -1,18 +1,18 @@
 import chalk from "chalk";
 import path from "path";
-import * as git from "@changesets/git";
-import { log, warn, error } from "@changesets/logger";
-import { Config } from "@changesets/types";
-import applyReleasePlan from "@changesets/apply-release-plan";
-import readChangesets from "@changesets/read";
-import assembleReleasePlan from "@changesets/assemble-release-plan";
+import * as git from "@fond-of/changesets-git";
+import { log, warn, error } from "@fond-of/changesets-logger";
+import { Config } from "@fond-of/changesets-types";
+import applyReleasePlan from "@fond-of/changesets-apply-release-plan";
+import readChangesets from "@fond-of/changesets-read";
+import assembleReleasePlan from "@fond-of/changesets-assemble-release-plan";
 import { getPackages } from "@manypkg/get-packages";
 
 import { removeEmptyFolders } from "../../utils/v1-legacy/removeFolders";
-import { readPreState } from "@changesets/pre";
-import { ExitError } from "@changesets/errors";
+import { readPreState } from "@fond-of/changesets-pre";
+import { ExitError } from "@fond-of/changesets-errors";
 import { getCommitFunctions } from "../../commit/getCommitFunctions";
-import { getCurrentCommitId } from "@changesets/git";
+import { getCurrentCommitId } from "@fond-of/changesets-git";
 
 let importantSeparator = chalk.red(
   "===============================IMPORTANT!==============================="

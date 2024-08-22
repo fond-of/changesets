@@ -123,8 +123,8 @@ export async function runVersion({
     let changesetsCliPkgJson = await require(path.join(
       cwd,
       "node_modules",
-      "@changesets",
-      "cli",
+      "@fond-of",
+      "changesets-cli",
       "package.json"
     ));
     let cmd = semverLt(changesetsCliPkgJson.version, "2.0.0")
@@ -132,7 +132,7 @@ export async function runVersion({
       : "version";
     await execWithOutput(
       "node",
-      ["./node_modules/@changesets/cli/bin.js", cmd],
+      ["./node_modules/@fond-of/changesets-cli/bin.js", cmd],
       { cwd }
     );
   }

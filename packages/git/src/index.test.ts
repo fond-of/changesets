@@ -2,8 +2,8 @@ import path from "path";
 import fs from "fs-extra";
 import spawn from "spawndamnit";
 import fileUrl from "file-url";
-import { gitdir, tempdir } from "@changesets/test-utils";
-import writeChangeset from "@changesets/write";
+import { gitdir, tempdir } from "@fond-of/changesets-test-utils";
+import writeChangeset from "@fond-of/changesets-write";
 
 import {
   getCommitsThatAddFiles,

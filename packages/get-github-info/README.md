@@ -1,6 +1,6 @@
-# @changesets/get-github-info
+# @fond-of/changesets-get-github-info
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@changesets/get-github-info)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@fond-of/changesets-get-github-info)
 
 > Get the GitHub username and PR number from a commit. Intended for use with changesets.
 
@@ -8,23 +8,23 @@
 
 > Note: This assumes you already have changesets setup.
 
-To use `@changesets/get-github-info`, you'll need to install it and you'll probably also want `dotenv` to provide a GitHub personal access token via a `.env` file.
+To use `@fond-of/changesets-get-github-info`, you'll need to install it and you'll probably also want `dotenv` to provide a GitHub personal access token via a `.env` file.
 
 ```bash
-yarn add --dev @changesets/get-github-info dotenv
+yarn add --dev @fond-of/changesets-get-github-info dotenv
 ```
 
 or
 
 ```bash
-npm install --save-dev @changesets/get-github-info dotenv
+npm install --save-dev @fond-of/changesets-get-github-info dotenv
 ```
 
 Then you can use it in your `.changeset/config.js` like this.
 
 ```jsx
 require("dotenv").config();
-const { getInfo } = require("@changesets/get-github-info");
+const { getInfo } = require("@fond-of/changesets-get-github-info");
 
 // ...
 

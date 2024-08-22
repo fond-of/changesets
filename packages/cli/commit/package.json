@@ -1,4 +1,4 @@
 {
-  "main": "dist/changesets-cli-commit.cjs.js",
-  "module": "dist/changesets-cli-commit.esm.js"
+  "main": "dist/fond-of-changesets-cli-commit.cjs.js",
+  "module": "dist/fond-of-changesets-cli-commit.esm.js"
 }

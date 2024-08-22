@@ -38,11 +38,11 @@ This command will ask you a series of questions, first about what packages you w
 
 Once confirmed, the changeset will be written a Markdown file that contains the summary and YAML front matter which stores the packages that will be released and the semver bump types for them.
 
-A changeset that major bumps @changesets/cli would look like this:
+A changeset that major bumps @fond-of/changesets-cli would look like this:
 
 ```
 ---
-"@changesets/cli": major
+"@fond-of/changesets-cli": major
 ---
 
 A description of the major changes.

@@ -2,7 +2,7 @@
 import Range from "semver/classes/range";
 import chalk from "chalk";
 import { Packages, Package } from "@manypkg/get-packages";
-import { PackageJSON } from "@changesets/types";
+import { PackageJSON } from "@fond-of/changesets-types";
 
 const DEPENDENCY_TYPES = [
   "dependencies",
