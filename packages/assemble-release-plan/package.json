@@ -20,14 +20,14 @@
   "repository": "https://github.com/changesets/changesets/tree/main/packages/assemble-release-plan",
   "dependencies": {
     "@babel/runtime": "^7.20.1",
-    "@fond-of/changesets-errors": "workspace:^",
-    "@fond-of/changesets-get-dependents-graph": "workspace:^",
-    "@fond-of/changesets-should-skip-package": "workspace:^",
-    "@fond-of/changesets-types": "workspace:^",
+    "@fond-of/changesets-errors": "*",
+    "@fond-of/changesets-get-dependents-graph": "*",
+    "@fond-of/changesets-should-skip-package": "*",
+    "@fond-of/changesets-types": "*",
     "@manypkg/get-packages": "^1.1.3",
     "semver": "^7.5.3"
   },
   "devDependencies": {
-    "@fond-of/changesets-config": "workspace:^"
+    "@fond-of/changesets-config": "*"
   }
 }

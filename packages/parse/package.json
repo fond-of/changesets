@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": "https://github.com/changesets/changesets/tree/main/packages/parse",
   "dependencies": {
-    "@fond-of/changesets-types": "workspace:^",
+    "@fond-of/changesets-types": "*",
     "js-yaml": "^3.13.1"
   },
   "devDependencies": {

@@ -1038,7 +1038,7 @@ describe("workspace range", () => {
     ]);
   });
 
-  it("should bump dependent package when bumping a `workspace:^` dependency", async () => {
+  it("should bump dependent package when bumping a `*` dependency", async () => {
     const cwd = await testdir({
       "package.json": JSON.stringify({
         private: true,
@@ -1048,7 +1048,7 @@ describe("workspace range", () => {
         name: "pkg-a",
         version: "1.0.0",
         dependencies: {
-          "pkg-b": "workspace:^",
+          "pkg-b": "*",
         },
       }),
       "packages/pkg-b/package.json": JSON.stringify({
@@ -1072,7 +1072,7 @@ describe("workspace range", () => {
         name: "pkg-a",
         version: "1.0.1",
         dependencies: {
-          "pkg-b": "workspace:^",
+          "pkg-b": "*",
         },
       },
       {
@@ -2877,7 +2877,7 @@ describe("pre", () => {
     `);
   });
 
-  it("bumping dependency in pre mode should result in dependant with workspace:^ range on that dependency to be patch bumped without changing the dependency range", async () => {
+  it("bumping dependency in pre mode should result in dependant with * range on that dependency to be patch bumped without changing the dependency range", async () => {
     const cwd = await testdir({
       "package.json": JSON.stringify({
         private: true,
@@ -2887,7 +2887,7 @@ describe("pre", () => {
         name: "pkg-a",
         version: "1.0.0",
         dependencies: {
-          "pkg-b": "workspace:^",
+          "pkg-b": "*",
         },
       }),
       "packages/pkg-b/package.json": JSON.stringify({
@@ -2913,7 +2913,7 @@ describe("pre", () => {
       [
         {
           "dependencies": {
-            "pkg-b": "workspace:^",
+            "pkg-b": "*",
           },
           "name": "pkg-a",
           "version": "1.0.1-alpha.0",

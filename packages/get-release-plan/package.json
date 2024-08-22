@@ -20,11 +20,11 @@
   "repository": "https://github.com/changesets/changesets/tree/main/packages/get-release-plan",
   "dependencies": {
     "@babel/runtime": "^7.20.1",
-    "@fond-of/changesets-assemble-release-plan": "workspace:^",
-    "@fond-of/changesets-config": "workspace:^",
-    "@fond-of/changesets-pre": "workspace:^",
-    "@fond-of/changesets-read": "workspace:^",
-    "@fond-of/changesets-types": "workspace:^",
+    "@fond-of/changesets-assemble-release-plan": "*",
+    "@fond-of/changesets-config": "*",
+    "@fond-of/changesets-pre": "*",
+    "@fond-of/changesets-read": "*",
+    "@fond-of/changesets-types": "*",
     "@manypkg/get-packages": "^1.1.3"
   }
 }

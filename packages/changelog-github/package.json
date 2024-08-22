@@ -19,11 +19,11 @@
   "license": "MIT",
   "repository": "https://github.com/changesets/changesets/tree/main/packages/changelog-github",
   "dependencies": {
-    "@fond-of/changesets-get-github-info": "workspace:^",
-    "@fond-of/changesets-types": "workspace:^",
+    "@fond-of/changesets-get-github-info": "*",
+    "@fond-of/changesets-types": "*",
     "dotenv": "^8.1.0"
   },
   "devDependencies": {
-    "@fond-of/changesets-parse": "workspace:^"
+    "@fond-of/changesets-parse": "*"
   }
 }

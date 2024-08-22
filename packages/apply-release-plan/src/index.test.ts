@@ -424,7 +424,7 @@ describe("apply release plan", () => {
             version: "1.0.0",
             dependencies: {
               "pkg-b": "workspace:*",
-              "pkg-c": "workspace:^",
+              "pkg-c": "*",
               "pkg-d": "workspace:~",
             },
           }),
@@ -456,7 +456,7 @@ describe("apply release plan", () => {
         version: "1.1.0",
         dependencies: {
           "pkg-b": "workspace:*",
-          "pkg-c": "workspace:^",
+          "pkg-c": "*",
           "pkg-d": "workspace:~",
         },
       });

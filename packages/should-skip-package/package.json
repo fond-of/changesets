@@ -20,10 +20,10 @@
   "repository": "https://github.com/changesets/changesets/tree/main/packages/should-skip-package",
   "dependencies": {
     "@babel/runtime": "^7.20.1",
-    "@fond-of/changesets-types": "workspace:^",
+    "@fond-of/changesets-types": "*",
     "@manypkg/get-packages": "^1.1.3"
   },
   "devDependencies": {
-    "@fond-of/changesets-test-utils": "workspace:^"
+    "@fond-of/changesets-test-utils": "*"
   }
 }

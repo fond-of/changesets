@@ -233,7 +233,7 @@ describe("assemble-release-plan", () => {
 
   it("should assemble the release plan only with workspace protocol dependents when using bumpVersionsWithWorkspaceProtocolOnly", () => {
     setup.updateDependency("pkg-b", "pkg-a", "^1.0.0");
-    setup.updateDependency("pkg-c", "pkg-a", "workspace:^1.0.0");
+    setup.updateDependency("pkg-c", "pkg-a", "*1.0.0");
     setup.addChangeset({
       id: "big-cats-delight",
       releases: [{ name: "pkg-a", type: "major" }],
@@ -256,9 +256,9 @@ describe("assemble-release-plan", () => {
     expect(releases[1].newVersion).toEqual("1.0.1");
     expect(releases[1].changesets).toEqual([]);
   });
-  it("should assemble the release plan with workspace:^ and workspace:~ dependents", () => {
+  it("should assemble the release plan with * and workspace:~ dependents", () => {
     setup.updateDependency("pkg-b", "pkg-a", "workspace:~");
-    setup.updateDependency("pkg-c", "pkg-a", "workspace:^");
+    setup.updateDependency("pkg-c", "pkg-a", "*");
     setup.addChangeset({
       id: "big-cats-delight",
       releases: [{ name: "pkg-a", type: "major" }],
@@ -1000,7 +1000,7 @@ Mixed changesets that contain both ignored and not ignored packages are not allo
 
   describe("workspace protocol", () => {
     it("should assemble release plan without workspace dependencies when the dependent has a changeset type of none", () => {
-      setup.updateDependency("pkg-c", "pkg-b", "workspace:^1.0.0");
+      setup.updateDependency("pkg-c", "pkg-b", "*1.0.0");
       setup.addChangeset({
         id: "big-cats-delight",
         releases: [{ name: "pkg-b", type: "none" }],

@@ -19,6 +19,6 @@
   "license": "MIT",
   "repository": "https://github.com/changesets/changesets/tree/main/packages/changelog-git",
   "dependencies": {
-    "@fond-of/changesets-types": "workspace:^"
+    "@fond-of/changesets-types": "*"
   }
 }
