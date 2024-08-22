@@ -78,8 +78,5 @@
     }
   },
   "prettier": {},
-  "resolutions": {
-    "@changesets/types": "file:packages/types"
-  },
   "packageManager": "yarn@4.4.0"
 }

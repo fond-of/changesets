@@ -1828,9 +1828,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@changesets/types@file:packages/types::locator=%40fond-of%2Fchangesets-repository%40workspace%3A.":
-  version: 6.0.0
-  resolution: "@changesets/types@file:packages/types#packages/types::hash=f30bfc&locator=%40fond-of%2Fchangesets-repository%40workspace%3A."
+"@changesets/types@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@changesets/types@npm:0.4.0"
+  checksum: 10c0/0175ca3370a7460925fac9e2fd1351e623f27c794d36334f834e6846a9d35da7fce284493c4db66d309fe9587a0c8edf895094537e2f24d21cb275efa9f8dad3
+  languageName: node
+  linkType: hard
+
+"@changesets/types@npm:^4.0.1":
+  version: 4.1.0
+  resolution: "@changesets/types@npm:4.1.0"
+  checksum: 10c0/a372ad21f6a1e0d4ce6c19573c1ca269eef1ad53c26751ad9515a24f003e7c49dcd859dbb1fedb6badaf7be956c1559e8798304039e0ec0da2d9a68583f13464
   languageName: node
   linkType: hard
 
