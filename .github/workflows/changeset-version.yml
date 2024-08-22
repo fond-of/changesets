@@ -13,7 +13,6 @@ env:
 jobs:
   release:
     name: Release
-    if: github.repository == 'changesets/changesets'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
