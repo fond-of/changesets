@@ -15,6 +15,11 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/ci-setup
